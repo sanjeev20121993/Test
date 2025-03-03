@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "4fd35bb6-f389-40b6-92a3-7a2830cbd925",
+		"name": "Sanjeev_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28767677"
+	},
+	"item": [
+		{
+			"name": "List Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/all-products"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/edit-product/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/delete-product/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cat_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "prod_name",
+							"value": "Electronics",
+							"type": "text"
+						},
+						{
+							"key": "prod_description",
+							"value": "This is product description",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "799",
+							"type": "text"
+						},
+						{
+							"key": "images[]",
+							"type": "file",
+							"src": "/C:/Users/Chandani/Downloads/download (13).jpg"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/add-products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"add-products"
+					],
+					"query": [
+						{
+							"key": "cat_id",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "product_name",
+							"value": "Motorolla",
+							"disabled": true
+						},
+						{
+							"key": "product_description",
+							"value": "This is product description",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "599",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cat_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "prod_name",
+							"value": "Electronics temp",
+							"type": "text"
+						},
+						{
+							"key": "prod_description",
+							"value": "This is product description (Product Temp)",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "images[]",
+							"type": "file",
+							"src": "/C:/Users/Chandani/Downloads/download (10).jpg"
+						},
+						{
+							"key": "remove_images[]",
+							"value": "8",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/update-products/3"
+			},
+			"response": []
+		}
+	]
+}
